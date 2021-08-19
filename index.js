@@ -334,16 +334,14 @@ let btn6 = document.querySelector(".btn-6");
 let message6 = document.querySelector(".message-6");
 
 function checkSoLe(n) {
-  let check = true
- 
-    while (n > 0) {
-      n = parseInt(n / 10);
-      digit = n % 10;
-      if (digit % 2 == 0) {
-        check = false;
-        break
+  let check = true;
+  while (n>0) {
+      if ((n % 10) % 2 == 0) {
+          check = false;
+          break;
       }
-    }
+      n=n/10;
+  }
   if (check == true) {
     message6.innerText = 'Yes'
   }
